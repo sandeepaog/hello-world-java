@@ -7,11 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
 
         stage('Build') {
             steps {
@@ -25,19 +20,8 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                // Add deployment steps here, if needed
-            }
-        }
+       
     }
 
-    post {
-        success {
-            // Add post-build steps here, if needed
-        }
-        failure {
-            // Add steps to handle a failed build, if needed
-        }
-    }
+    
 }
